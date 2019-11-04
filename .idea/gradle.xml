@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AlarmManagerLib" />
+            <option value="$PROJECT_DIR$/AndroidJobLib" />
+            <option value="$PROJECT_DIR$/ColorPicker" />
+            <option value="$PROJECT_DIR$/CoordinateLayoutLib" />
+            <option value="$PROJECT_DIR$/DesktopWidget" />
+            <option value="$PROJECT_DIR$/DownloadManagerLib" />
+            <option value="$PROJECT_DIR$/ForegroundServiceLib" />
+            <option value="$PROJECT_DIR$/JobSchedulerLib" />
+            <option value="$PROJECT_DIR$/KotlinLearn" />
+            <option value="$PROJECT_DIR$/Lifecycle" />
+            <option value="$PROJECT_DIR$/MyBase64" />
+            <option value="$PROJECT_DIR$/NotificationLib" />
+            <option value="$PROJECT_DIR$/RemoteViewsNotifi" />
+            <option value="$PROJECT_DIR$/RoomLib" />
+            <option value="$PROJECT_DIR$/RxJava2Lib" />
+            <option value="$PROJECT_DIR$/ServiceLib" />
+            <option value="$PROJECT_DIR$/WebViewLib" />
+            <option value="$PROJECT_DIR$/WorkManagerLib" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

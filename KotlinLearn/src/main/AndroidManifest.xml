@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.duke.kotlinlearn" >
+
+    <application>
+        <activity android:name=".recyclerView.TestNewAdapterActivity"></activity>
+        <activity android:name=".learn3.db.DBActivity" />
+        <activity android:name=".learn3.sp.SPActivity" />
+        <activity android:name=".Kotlin1Activity" />
+    </application>
+
+</manifest>
