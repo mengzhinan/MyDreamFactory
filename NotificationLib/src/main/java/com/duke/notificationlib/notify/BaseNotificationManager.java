@@ -35,13 +35,11 @@ public class BaseNotificationManager {
     private String CHANNEL_NAME = "channel_name";
 
     private static NotificationManagerCompat NOTIFICATION_MANAGER_COMPAT;
-    private static NotificationManager NOTIFICATION_MANAGER;
     private static BaseNotificationManager INSTANCE;
     private static Context APPLICATION_CONTEXT;
 
     private BaseNotificationManager(Context context) {
         NOTIFICATION_MANAGER_COMPAT = NotificationManagerCompat.from(context);
-        NOTIFICATION_MANAGER = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         APPLICATION_CONTEXT = context.getApplicationContext();
     }
 
@@ -128,9 +126,9 @@ public class BaseNotificationManager {
      * @param importance example : NotificationManager.IMPORTANCE_DEFAULT
      */
     private String getExistsChannelId(int importance) {
-        if (NOTIFICATION_MANAGER != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (NOTIFICATION_MANAGER_COMPAT != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String defaultChannel = null;
-            List<NotificationChannel> list = NOTIFICATION_MANAGER.getNotificationChannels();
+            List<NotificationChannel> list = NOTIFICATION_MANAGER_COMPAT.getNotificationChannels();
             if (list != null && !list.isEmpty()) {
                 for (NotificationChannel channel : list) {
 
@@ -156,13 +154,13 @@ public class BaseNotificationManager {
      */
     public String createNotificationChannelSimple(String channelId,
                                                   String channelName) {
-        if (NOTIFICATION_MANAGER == null || Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+        if (NOTIFICATION_MANAGER_COMPAT == null || Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             return null;
         }
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         NotificationChannel channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
-        NOTIFICATION_MANAGER.createNotificationChannel(channel);
+        NOTIFICATION_MANAGER_COMPAT.createNotificationChannel(channel);
         return channelId;
     }
 
@@ -179,7 +177,7 @@ public class BaseNotificationManager {
                                             String channelName,
                                             String channelDescription,
                                             int importance) {
-        if (NOTIFICATION_MANAGER == null) {
+        if (NOTIFICATION_MANAGER_COMPAT == null) {
             return null;
         }
         // Create the NotificationChannel, but only on API 26+ because
@@ -192,7 +190,7 @@ public class BaseNotificationManager {
             channel.enableVibration(true);
             channel.enableLights(true);
             channel.setLightColor(Color.BLUE);
-            NOTIFICATION_MANAGER.createNotificationChannel(channel);
+            NOTIFICATION_MANAGER_COMPAT.createNotificationChannel(channel);
             return channelId;
         }
         return null;
