@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.duke.kotlinlearn" >
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application>
         <activity android:name=".recyclerView.TestNewAdapterActivity"></activity>
         <activity android:name=".learn3.db.DBActivity" />
