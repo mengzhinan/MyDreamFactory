@@ -1,4 +1,23 @@
-include ':app', ':KotlinLearn', ':MyBase64', ':AlarmManagerLib', ':JobSchedulerLib', ':WorkManagerLib', ':AndroidJobLib', ':DownloadManagerLib', ':ForegroundServiceLib', ':ServiceLib', ':NotificationLib', ':Lifecycle', ':RoomLib', ':WebViewLib', ':RxJava2Lib', ':ColorPicker', ':CoordinateLayoutLib', ':RemoteViewsNotifi', ':DesktopWidget'
+include ':app',
+        ':KotlinLearn',
+        ':MyBase64',
+        ':AlarmManagerLib',
+        ':JobSchedulerLib',
+        ':WorkManagerLib',
+        ':AndroidJobLib',
+        ':DownloadManagerLib',
+        ':ForegroundServiceLib',
+        ':ServiceLib',
+        ':NotificationLib',
+        ':Lifecycle',
+        ':RoomLib',
+        ':WebViewLib',
+        ':TabLayoutLib',
+        ':RxJava2Lib',
+        ':ColorPicker',
+        ':CoordinateLayoutLib',
+        ':RemoteViewsNotifi',
+        ':DesktopWidget'
 
-rootProject.name='MyDreamFactory'
+rootProject.name = 'MyDreamFactory'
 

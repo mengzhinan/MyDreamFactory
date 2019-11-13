@@ -5,12 +5,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.duke.mydreamfactory"
-        minSdkVersion 15
-        targetSdkVersion 29
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -71,4 +71,8 @@ dependencies {
     implementation project(path: ':Lifecycle')
     implementation project(path: ':NotificationLib')
     implementation project(path: ':ColorPicker')
+    implementation project(path: ':RemoteViewsNotifi')
+    implementation project(path: ':CoordinateLayoutLib')
+    implementation project(path: ':TabLayoutLib')
+    implementation project(path: ':DesktopWidget')
 }
